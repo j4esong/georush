@@ -26,15 +26,15 @@ class GeoRush {
 		Cube cube = new Cube(new Vertex(0, 0, 3), 1);
 		one.add(cube);
 
-        JFrame testFrame = new JFrame();
-        testFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        panel.setPreferredSize(new Dimension((int) (2 * panel.SCALE), (int) (2 * panel.SCALE)));
-        testFrame.getContentPane().add(panel, BorderLayout.CENTER);
-        testFrame.pack();
-        testFrame.setVisible(true);
+       		JFrame testFrame = new JFrame();
+        	testFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        	panel.setPreferredSize(new Dimension((int) (2 * panel.SCALE), (int) (2 * panel.SCALE)));
+        	testFrame.getContentPane().add(panel, BorderLayout.CENTER);
+        	testFrame.pack();
+        	testFrame.setVisible(true);
 
-       	Engine e = new Engine(panel);
-       	e.start();
+       		Engine e = new Engine(panel);
+       		e.start();
 	}
  
 }
