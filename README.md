@@ -1,1 +1,1 @@
-scuffed attempt at a game in Java
+attempt at a game engine in Java
