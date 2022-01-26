@@ -60,7 +60,6 @@ class Engine extends Thread {
             dx = cdx * r.camera.getOrientation()[0][0] + cdy * r.camera.getOrientation()[0][1] + cdz * r.camera.getOrientation()[0][2];
             dz = cdx * r.camera.getOrientation()[2][0] + cdy * r.camera.getOrientation()[2][1] + cdz * r.camera.getOrientation()[2][2];
 
-
             r.camera.getPos().wx += dx;
             r.camera.getPos().wy += dy;
             r.camera.getPos().wz += dz;
