@@ -1,8 +1,8 @@
 class Vertex {
-	
-	public double wx, wy, wz; 
 
-	public Vertex(double x, double y, double z) {
+    public double wx, wy, wz;
+
+    public Vertex(double x, double y, double z) {
         wx = x;
         wy = y;
         wz = z;
@@ -10,6 +10,6 @@ class Vertex {
 
     @Override
     public String toString() {
-    	return "{" + wx + ", " + wy + ", " + wz + "}";
+        return "{" + wx + ", " + wy + ", " + wz + "}";
     }
 }

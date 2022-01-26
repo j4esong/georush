@@ -3,12 +3,12 @@ import java.util.ArrayList;
 
 class Cube extends Model {
 
-	public Vertex center;
+    public Vertex center;
 
-	public Cube(Vertex center, double size) {
-		super(new ArrayList<>());
-		this.center = center;
-		Vertex v1 = new Vertex(center.wx - 0.5 * size, center.wy - 0.5 * size, center.wz - 0.5 * size);
+    public Cube(Vertex center, double size) {
+        super(new ArrayList<>());
+        this.center = center;
+        Vertex v1 = new Vertex(center.wx - 0.5 * size, center.wy - 0.5 * size, center.wz - 0.5 * size);
         Vertex v2 = new Vertex(center.wx - 0.5 * size, center.wy + 0.5 * size, center.wz - 0.5 * size);
         Vertex v3 = new Vertex(center.wx + 0.5 * size, center.wy + 0.5 * size, center.wz - 0.5 * size);
         Vertex v4 = new Vertex(center.wx + 0.5 * size, center.wy - 0.5 * size, center.wz - 0.5 * size);
@@ -28,6 +28,6 @@ class Cube extends Model {
         lines.add(new Line(v2, v6));
         lines.add(new Line(v3, v7));
         lines.add(new Line(v4, v8));
-	}
+    }
 
 }

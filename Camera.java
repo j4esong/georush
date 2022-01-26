@@ -1,5 +1,5 @@
 class Camera {
-	
+
 	private Vertex pos;
 	private double pitch, yaw;
 	private double[][] orientation;	//unit vectors storing orientation of cam
