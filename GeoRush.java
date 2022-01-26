@@ -7,9 +7,6 @@ import java.util.List;
 import java.lang.Math;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -60,11 +57,23 @@ class Engine extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            dz = cdx * r.camera.getOrientation()[2][0] + cdy * r.camera.getOrientation()[2][1] + cdz * r.camera.getOrientation()[2][2];
             dx = cdx * r.camera.getOrientation()[0][0] + cdy * r.camera.getOrientation()[0][1] + cdz * r.camera.getOrientation()[0][2];
-            r.camera.getPos().wz += dz;
+            dz = cdx * r.camera.getOrientation()[2][0] + cdy * r.camera.getOrientation()[2][1] + cdz * r.camera.getOrientation()[2][2];
+
+
             r.camera.getPos().wx += dx;
+            r.camera.getPos().wy += dy;
+            r.camera.getPos().wz += dz;
+
+            if (r.camera.getPos().wy > 2) {
+                dy -= 0.0115;
+            } else {
+                dy = 0;
+                r.camera.getPos().wy = 2;
+            }
+
             r.camera.setYaw(r.camera.getYaw() + dyaw);
+
             r.repaint();
         }
     }
@@ -93,6 +102,12 @@ class Engine extends Thread {
                 break;
             case KeyEvent.VK_Z:
                 r.camera.setYaw(0);
+                break;
+            case KeyEvent.VK_SPACE:
+                if (dy == 0) {
+                    dy = 0.2;
+                }
+                break;
             }
         }
 
